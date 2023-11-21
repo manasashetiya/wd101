@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f3f4f6;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input:invalid:focus {
+      border-color: #ff5f5f;
+    }
+
+    button {
+      background-color: #3490dc;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+      display: block;
+      margin: 0 auto;
+    }
+
+    button:hover {
+      background-color: #2779bd;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 24px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #2d3748;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #edf2f7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <!-- Form element-->
+    <form id="form">
+      <!-- Name -->
+      <div class="mb-4">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required class="input-field" />
+      </div>
+      <!-- Email -->
+      <div class="mb-4">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required class="input-field" />
+      </div>
+      <!-- Password -->
+      <div class="mb-4">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required class="input-field" />
+      </div>
+      <!-- Date Of Birth -->
+      <div class="mb-4">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required placeholder="dd-mmyyyy" class="input-field" />
+      </div>
+      <!-- Accept Terms & Conditions -->
+      <div class="mb-4">
+        <input type="checkbox" id="acceptTerms" name="acceptTerms" required class="mr-2 leading-tight focus:outline-none" />
+        <label for="acceptTerms" class="text-sm text-gray-700">Accept Terms & Conditions</label>
+      </div>
+      <!-- Submit -->
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <!-- Table to display -->
+  <table id="table"></table>
+  <script src="index.js"></script>
+</body>
+
+</html>
