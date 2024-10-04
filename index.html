@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+        input:invalid:focus{
+            border-color: red;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-serif">
+    <div class="container max-w-md mx-auto bg-gray-50 rounded-xl p-8 shadow-lg">
+        <h1 class="text-xl font-bold mb-5 text-center">Registration Form</h1>
+        <form id="form" class="mb-8">
+            <div class="mb-3 flex items-center">
+                <label for="name" class="block mb-1 mr-2 text-gray-800 text-sm font-strong">Name</label>
+                <input type="text" name="name" id="name" required placeholder="Enter name" class="input-required w-full p-1 border border-grey-500 rectangled focus:outline-none focus:border-green-400 transition-duration-100">
+            </div>
+            <div class="mb-3 flex items-center">
+                <label for="email" class="block mb-1 mr-2 text-gray-800 text-sm font-strong">Email</label>
+                <input type="email" name="email" id="email" required placeholder="Enter email" class="input-required peer w-full p-1 border border-grey-500 rectangled focus:outline-none focus:border-green-400 transition-duration-100 invalid:border-red-500 focus:invalid:border-red-500 focus:border-red">
+            </div>
+            <div class="mb-3 flex items-center">
+                <label for="password" class="block mb-1 mr-2 text-gray-800 text-sm font-strong">Password</label>
+                <input type="password" name="password" id="password" required placeholder="Enter password" class="input-required w-full p-1 border border-grey-500 rectangled focus:outline-none focus:border-green-400 transition-duration-100">
+            </div>
+            <div class="mb-3 flex items-center">
+                <label for="dob" class="block mb-1 mr-2 text-gray-800 text-sm font-strong">Date of Birth</label>
+                <input type="date" name="dob" id="dob" required placeholder="dd/mm/yyyy" class="w-full p-1 border border-grey-500 rectangled focus:outline-none focus:border-green-400 transition-duration-100">
+            </div>
+            <div class="mb-3">
+                <input value = "True" type="checkbox" name="acceptterms" id="acceptterms" required class="mr-2" >
+                <label for="acceptterms">Accept terms and conditions</label>
+            </div>
+            <button id = "btn"  type="button" class="bg-blue-500 text-white py-4 px-8 rounded cursor-pointer text-md transition duration-400 block mx-auto hover:bg-blue-600">Submit</button>
+        </form>
+    </div>
+    <table id="table" class= "min-w-full border border-gray-200">
+        <thead>
+            <tr class="border-3 border-gray-200 bg-gray-400">
+                <th class="border border-black-300 px-6 py-3 text-center">Name</th>
+                <th class="border border-black-300 px-6 py-3 text-center">Email</th>
+                <th class="border border-black-300 px-6 py-3 text-center">Password</th>
+                <th class="border border-black-300 px-6 py-3 text-center">Dob</th>
+                <th class="border border-black-300 px-6 py-3 text-center">Accepted Terms?</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>
